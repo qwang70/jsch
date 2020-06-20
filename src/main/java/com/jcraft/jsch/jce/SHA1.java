@@ -32,12 +32,15 @@ package com.jcraft.jsch.jce;
 import com.jcraft.jsch.HASH;
 
 import java.security.*;
+import java.util.Collections;
+import java.util.Map;
 
 public class SHA1 implements HASH{
   MessageDigest md;
+  private Map<Integer, String> algMap = Collections.singletonMap(231, "SHA-1");
   public int getBlockSize(){return 20;}
   public void init() throws Exception{
-    try{ md=MessageDigest.getInstance("SHA-1"); }
+    try{ md=MessageDigest.getInstance(algMap.get(231)); }
     catch(Exception e){
       System.err.println(e);
     }

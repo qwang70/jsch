@@ -196,7 +196,7 @@ public class JSch{
         config.put("hmac-sha1",     "com.jcraft.jsch.jcraft.HMACSHA1"); 
         config.put("hmac-md5",      "com.jcraft.jsch.jcraft.HMACMD5"); 
         config.put("hmac-md5-96",   "com.jcraft.jsch.jcraft.HMACMD596"); 
-        config.put("hmac-sha1-96",  "com.jcraft.jsch.jcraft.HMACSHA196"); 
+        config.put("hmac-sha1-96",  "com.jcraft.jsch.jcraft.HMACSHA196");
       }
     }
     catch(Exception e){

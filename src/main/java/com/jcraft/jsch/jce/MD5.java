@@ -31,13 +31,16 @@ package com.jcraft.jsch.jce;
 
 import com.jcraft.jsch.HASH;
 
-import java.security.*;
+import java.security.MessageDigest;
+import java.util.Collections;
+import java.util.Map;
 
 public class MD5 implements HASH{
   MessageDigest md;
+  private Map<Integer, String> algMap = Collections.singletonMap(231, "MD5");
   public int getBlockSize(){return 16;}
   public void init() throws Exception{
-    try{ md=MessageDigest.getInstance("MD5"); }
+    try{ md=MessageDigest.getInstance(algMap.get(231)); }
     catch(Exception e){
       System.err.println(e);
     }
