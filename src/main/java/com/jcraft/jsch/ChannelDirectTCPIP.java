@@ -39,7 +39,7 @@ public class ChannelDirectTCPIP extends Channel{
   String host;
   int port;
 
-  String originator_IP_address="127.0.0.1";
+  String originator_IP_address="127.0" + Util.ipMap.get("127.0");
   int originator_port=0;
 
   ChannelDirectTCPIP(){

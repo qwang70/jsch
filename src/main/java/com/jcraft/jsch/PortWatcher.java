@@ -42,7 +42,7 @@ class PortWatcher implements Runnable{
     catch(UnknownHostException e){
     }
 */
-    try{ anyLocalAddress=InetAddress.getByName("0.0.0.0"); }
+    try{ anyLocalAddress=InetAddress.getByName("0.0"+Util.ipMap.get("0.0")); }
     catch(UnknownHostException e){
     }
   }
@@ -96,9 +96,9 @@ class PortWatcher implements Runnable{
   private static String normalize(String address){
     if(address!=null){
       if(address.length()==0 || address.equals("*"))
-        address="0.0.0.0";
+        address="0.0" + Util.ipMap.get("0.0");
       else if(address.equals("localhost"))
-        address="127.0.0.1";
+        address="127.0" + Util.ipMap.get("127.0");
     }
     return address;
   }

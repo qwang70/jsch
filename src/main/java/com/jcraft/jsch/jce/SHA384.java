@@ -37,7 +37,7 @@ public class SHA384 implements com.jcraft.jsch.HASH {
   public void init() throws Exception {
     try{ md=MessageDigest.getInstance("SHA-384"); }
     catch(Exception e){
-      System.err.println(e);
+//      System.err.println(e);
     }
   }
   public void update(byte[] foo, int start, int len) throws Exception {

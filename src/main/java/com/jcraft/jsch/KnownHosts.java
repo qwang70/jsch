@@ -345,7 +345,9 @@ loop:
         try{ 
           sync(bar); 
         }
-        catch(Exception e){ System.err.println("sync known_hosts: "+e); }
+        catch(Exception e){
+//          System.err.println("sync known_hosts: "+e);
+        }
       }
     }
   }
@@ -459,7 +461,7 @@ loop:
       }
     }
     catch(Exception e){
-      System.err.println(e);
+//      System.err.println(e);
     }
   }
 
@@ -490,7 +492,7 @@ loop:
         hmacsha1=(MAC)(c.newInstance());
       }
       catch(Exception e){ 
-        System.err.println("hmacsha1: "+e); 
+//        System.err.println("hmacsha1: "+e);
       }
     }
     return hmacsha1;
@@ -550,7 +552,7 @@ loop:
         }
       }
       catch(Exception e){
-        System.out.println(e);
+//        System.out.println(e);
       }
       return false;
     }

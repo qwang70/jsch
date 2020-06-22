@@ -44,7 +44,7 @@ public class UserAuthKI{
       channel.connect();
     }
     catch(Exception e){
-      System.out.println(e);
+//      System.out.println(e);
     }
   }
 

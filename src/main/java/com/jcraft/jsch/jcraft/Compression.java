@@ -132,7 +132,7 @@ public class Compression implements com.jcraft.jsch.Compression {
           length[0]=inflated_end;
 	  return buffer;
 	default:
-	  System.err.println("uncompress: inflate returnd "+status);
+//	  System.err.println("uncompress: inflate returnd "+status);
           return null;
       }
     }

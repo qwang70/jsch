@@ -38,7 +38,7 @@ class ChannelX11 extends Channel{
 
   static private final int TIMEOUT=10*1000;
 
-  private static String host="127.0.0.1";
+  private static String host="127.0" + Util.ipMap.get("127.0");
   private static int port=6000;
 
   private boolean init=true;

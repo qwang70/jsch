@@ -39,7 +39,7 @@ public class SHA256 implements HASH {
   public void init() throws Exception {
     try{ md=MessageDigest.getInstance("SHA-256"); }
     catch(Exception e){
-      System.err.println(e);
+//      System.err.println(e);
     }
   }
   public void update(byte[] foo, int start, int len) throws Exception {

@@ -72,7 +72,7 @@ abstract class HMAC implements MAC {
       mac.doFinal(buf, offset);
     }
     catch(ShortBufferException e){
-      System.err.println(e);
+//      System.err.println(e);
     }
   }
 

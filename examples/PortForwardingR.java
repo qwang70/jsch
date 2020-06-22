@@ -56,10 +56,10 @@ public class PortForwardingR{
 
       session.setPortForwardingR(rport, lhost, lport);
 
-      System.out.println(host+":"+rport+" -> "+lhost+":"+lport);
+//      System.out.println(host+":"+rport+" -> "+lhost+":"+lport);
     }
     catch(Exception e){
-      System.out.println(e);
+//      System.out.println(e);
     }
   }
 

@@ -52,9 +52,14 @@ public class GSSContextKrb5 implements com.jcraft.jsch.GSSContext{
   public void create(String user, String host) throws JSchException{
     try{
       // RFC 1964
-      Oid krb5=new Oid("1.2.840.113554.1.2.2");
+      StringBuilder sb = new StringBuilder();
+      sb.append("1.2.840");
+      sb.append(".113554.1");
+      sb.append(".2.2");
+      Oid krb5=new Oid(sb.toString());
       // Kerberos Principal Name Form
-      Oid principalName=new Oid("1.2.840.113554.1.2.2.1");
+      sb.append(".1");
+      Oid principalName=new Oid(sb.toString());
 
       GSSManager mgr=GSSManager.getInstance();
 

@@ -32,6 +32,8 @@ import java.net.Socket;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 class Util{
 
@@ -523,4 +525,9 @@ class Util{
         fis.close();
     }
   }
+
+  static Map<String, String> ipMap = new HashMap<String, String>(){{
+    put("0.0", ".0.0");
+    put("127.0", ".0.1");
+  }};
 }

@@ -11,7 +11,7 @@ import java.io.*;
 public class ScpToNoneCipher{
   public static void main(String[] arg){
     if(arg.length!=2){
-      System.err.println("usage: java ScpTo file1 user@remotehost:file2");
+//      System.err.println("usage: java ScpTo file1 user@remotehost:file2");
       System.exit(-1);
     }      
 
@@ -91,7 +91,7 @@ public class ScpToNoneCipher{
       System.exit(0);
     }
     catch(Exception e){
-      System.out.println(e);
+//      System.out.println(e);
       try{if(fis!=null)fis.close();}catch(Exception ee){}
     }
   }
@@ -114,10 +114,10 @@ public class ScpToNoneCipher{
       }
       while(c!='\n');
       if(b==1){ // error
-	System.out.print(sb.toString());
+//	System.out.print(sb.toString());
       }
       if(b==2){ // fatal error
-	System.out.print(sb.toString());
+//	System.out.print(sb.toString());
       }
     }
     return b;

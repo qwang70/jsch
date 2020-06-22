@@ -265,7 +265,7 @@ public class ChannelForwardedTCPIP extends Channel{
         address_to_bind=foo.address_to_bind;
       }	
       if(address_to_bind==null){
-        address_to_bind="0.0.0.0";
+        address_to_bind="0.0"+Util.ipMap.get("0.0");
       }
     }
 

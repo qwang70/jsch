@@ -163,7 +163,9 @@ public abstract class KeyExchange{
       Class c=Class.forName(session.getConfig("md5"));
       hash=(HASH)(c.newInstance());
     }
-    catch(Exception e){ System.err.println("getFingerPrint: "+e); }
+    catch(Exception e){
+//      System.err.println("getFingerPrint: "+e);
+    }
     return Util.getFingerPrint(hash, getHostKey());
   }
   byte[] getK(){ return K; }
@@ -219,7 +221,7 @@ public abstract class KeyExchange{
         sig.init();
       }
       catch(Exception e){
-        System.err.println(e);
+//        System.err.println(e);
       }
       sig.setPubKey(ee, n);   
       sig.update(H);
@@ -264,7 +266,7 @@ public abstract class KeyExchange{
         sig.init();
       }
       catch(Exception e){
-        System.err.println(e);
+//        System.err.println(e);
       }
       sig.setPubKey(f, p, q, g);   
       sig.update(H);
@@ -306,7 +308,7 @@ public abstract class KeyExchange{
         sig.init();
       }
       catch(Exception e){
-        System.err.println(e);
+//        System.err.println(e);
       }
 
       sig.setPubKey(r, s);
@@ -316,7 +318,7 @@ public abstract class KeyExchange{
       result=sig.verify(sig_of_H);
     }
     else{
-      System.err.println("unknown alg");
+//      System.err.println("unknown alg");
     }	    
 
     return result;

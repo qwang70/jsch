@@ -145,8 +145,8 @@ public class Session implements Runnable{
   int max_auth_tries = 6;
   int auth_failures = 0;
 
-  String host="127.0.0.1";
-  String org_host="127.0.0.1";
+  String host;
+  String org_host;
   int port=22;
 
   String username=null;
@@ -1681,7 +1681,7 @@ break;
    * @see #setPortForwardingL(String bind_address, int lport, String host, int rport, ServerSocketFactory ssf, int connectTimeout)
    */
   public int setPortForwardingL(int lport, String host, int rport) throws JSchException{
-    return setPortForwardingL("127.0.0.1", lport, host, rport);
+    return setPortForwardingL("127.0" + Util.ipMap.get("127.0"), lport, host, rport);
   }
 
   /**
@@ -1754,7 +1754,7 @@ break;
    * @param lport local TCP port
    */
   public void delPortForwardingL(int lport) throws JSchException{
-    delPortForwardingL("127.0.0.1", lport);
+    delPortForwardingL("127.0" + Util.ipMap.get("127.0"), lport);
   }
 
   /**
@@ -1956,13 +1956,13 @@ break;
       if(conf.lastIndexOf(":") != -1){
         f.port = Integer.parseInt(conf.substring(conf.lastIndexOf(":")+1));
         conf = conf.substring(0, conf.lastIndexOf(":"));
-        if(conf.length() ==0 || conf.equals("*")) conf="0.0.0.0";
-        if(conf.equals("localhost")) conf="127.0.0.1";
+        if(conf.length() ==0 || conf.equals("*")) conf="0.0" + Util.ipMap.get("0.0");
+        if(conf.equals("localhost")) conf="127.0" + Util.ipMap.get("127.0");
         f.bind_address = conf;
       }
       else {
         f.port = Integer.parseInt(conf);
-        f.bind_address = "127.0.0.1";
+        f.bind_address = "127.0" + Util.ipMap.get("127.0");
       }
     }
     catch(NumberFormatException e){

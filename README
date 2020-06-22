@@ -92,6 +92,10 @@ Features
 
 How To Try
 ==========
+Pom to Jar
+```
+mvn package
+```
 This archive does not include java byte code, so please compile
 the source code by your self.
   $ cd jsch-?.?.?/src

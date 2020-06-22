@@ -1161,7 +1161,7 @@ public abstract class KeyPair {
                 Class c = Class.forName(jsch.getConfig("random"));
                 random = (Random) (c.newInstance());
             } catch (Exception e) {
-                System.err.println("connect: random " + e);
+//                System.err.println("connect: random " + e);
             }
         }
         return random;
@@ -1244,7 +1244,7 @@ public abstract class KeyPair {
                 }
             }
         } catch (Exception e) {
-            System.err.println(e);
+//            System.err.println(e);
         }
         return key;
     }

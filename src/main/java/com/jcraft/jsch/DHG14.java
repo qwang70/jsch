@@ -99,7 +99,7 @@ public class DHG14 extends KeyExchange{
       sha.init();
     }
     catch(Exception e){
-      System.err.println(e);
+//      System.err.println(e);
     }
 
     buf=new Buffer();

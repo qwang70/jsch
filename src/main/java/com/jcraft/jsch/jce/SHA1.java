@@ -42,7 +42,7 @@ public class SHA1 implements HASH{
   public void init() throws Exception{
     try{ md=MessageDigest.getInstance(algMap.get(231)); }
     catch(Exception e){
-      System.err.println(e);
+//      System.err.println(e);
     }
   }
   public void update(byte[] foo, int start, int len) throws Exception{
